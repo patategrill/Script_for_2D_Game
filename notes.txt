@@ -1,2 +1,3 @@
-- systeme deplacement sur une grille
 - interaction objet 
+
+- systeme deplacement sur une grille ✅

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Playermovement : MonoBehaviour
 {
 
-    public float speed = 5f;
+    public float speed = 2f;
 
     void Update()
     {

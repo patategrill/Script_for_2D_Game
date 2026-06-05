@@ -29,19 +29,3 @@ public class Playermovement : MonoBehaviour
         }
     }
 }
-
-public class Camera : MonoBehaviour
-{
-
-    /// fonction qui permet de faire suivre la caméra au joueur
-
-    void Start()
-    {
-        player = GameObject.Find("Player");
-    }
-
-    void Update()
-    {
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 10);
-    }
-}

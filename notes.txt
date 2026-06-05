@@ -1,3 +1,5 @@
 - interaction objet 
 
-- systeme deplacement sur une grille ✅
+- systeme deplacement sur une grille ✅ (mais qwerty)
+- camera (en cours)
+- animations de marche (en cours)

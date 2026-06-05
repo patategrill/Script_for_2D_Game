@@ -5,6 +5,7 @@ public class Playermovement : MonoBehaviour
 
     public float speed = 2f;
 
+
     void Update()
     {
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
@@ -26,5 +27,18 @@ public class Playermovement : MonoBehaviour
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
+    }
+}
+
+public class Camera : MonoBehaviour
+{
+    void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
+    void Update()
+    {
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 10);
     }
 }

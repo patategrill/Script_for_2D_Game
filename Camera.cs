@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using unityEngine;
 
 public class Camera : MonoBehaviour

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Playermovement : MonoBehaviour
 {
-
+    /// fonction qui permet de faire bouger le joueur
     public float speed = 2f;
 
 
@@ -32,6 +32,9 @@ public class Playermovement : MonoBehaviour
 
 public class Camera : MonoBehaviour
 {
+
+    /// fonction qui permet de faire suivre la caméra au joueur
+
     void Start()
     {
         player = GameObject.Find("Player");

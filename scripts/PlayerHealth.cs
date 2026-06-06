@@ -4,7 +4,7 @@ public class PlayerHealth : MonoBehaviour
 {
      public int MaxHealth = 100;
      public int Health;
-     public bool IsDead = false;
+     public bool IsPlayerDead = false;
 
      void Start()
      {
@@ -16,10 +16,10 @@ public class PlayerHealth : MonoBehaviour
         if (Health <= 0)
         {
                Debug.Log("Player is dead!");
-               IsDead = true;
+               IsPlayerDead = true;
         }
 
-        if (IsDead)
+        if (IsPlayerDead)
         {
                // Gérer la mort du joueur (game over, respawn, etc...)
         }

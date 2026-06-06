@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class PlayerHealth : Monobehaviour
 {
-     public int Health = 100;
+     public int MaxHealth = 100;
+     public int Health;
      public bool IsDead = false;
+
+     void start()
+     {
+          Health = MaxHealth; ///initialiser la santé du joueur à sa santé maximale
+     }
 
      void Update()
      {
@@ -24,8 +30,18 @@ public class PlayerHealth : Monobehaviour
           Health -= damage; ///créer une variable pour stocker les dégâts
      }
 
-     public void Heal(int healAmount)
+     public void Heal(int heal)
      {
-          Health += healAmount; ///créer une variable pour stocker les soins
+
+     while (Health < MaxHealth)
+     {
+          Health += heal; ///créer une variable pour stocker les soin
      }
+     
+     if (Health > MaxHealth)
+     {
+          Health = MaxHealth;
+     }
+     }
+     
 }

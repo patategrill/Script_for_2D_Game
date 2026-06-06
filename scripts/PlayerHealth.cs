@@ -33,15 +33,15 @@ public class PlayerHealth : Monobehaviour
      public void Heal(int heal)
      {
 
-     while (Health < MaxHealth)
-     {
-          Health += heal; ///créer une variable pour stocker les soin
+          while (Health < MaxHealth)
+          {
+               Health += heal; ///créer une variable pour stocker les soin
+          }
+
+          if (Health > MaxHealth)
+          {
+               Health = MaxHealth;
+          }
      }
-     
-     if (Health > MaxHealth)
-     {
-          Health = MaxHealth;
-     }
-     }
-     
+
 }

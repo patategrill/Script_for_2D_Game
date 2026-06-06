@@ -23,4 +23,9 @@ public class PlayerHealth : Monobehaviour
      {
           Health -= damage; ///créer une variable pour stocker les dégâts
      }
+
+     public void Heal(int healAmount)
+     {
+          Health += healAmount; ///créer une variable pour stocker les soins
+     }
 }

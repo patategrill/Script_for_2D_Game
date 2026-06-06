@@ -12,6 +12,11 @@ public class PlayerHealth : Monobehaviour
                Debug.Log("Player is dead!");
                IsDead = true;
         }
+
+        if (IsDead)
+        {
+               // Gérer la mort du joueur (game over, respawn, etc...)
+        }
      }
 
      public void TakeDamage(int damage)

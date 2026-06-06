@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class PlayerHealth : Monobehaviour
+public class PlayerHealth : MonoBehaviour
 {
      public int MaxHealth = 100;
      public int Health;
      public bool IsDead = false;
 
-     void start()
+     void Start()
      {
           Health = MaxHealth; ///initialiser la santé du joueur à sa santé maximale
      }

@@ -6,6 +6,7 @@ public class PlayerDash : MonoBehaviour
     public float dashSpeed = 20f;
     public float dashDuration = 0.5f;
     public int dashrefresh;
+    public bool isDashing = false;
 
     public float timer = 2f;
 
@@ -23,9 +24,11 @@ public class PlayerDash : MonoBehaviour
             {
                 return;
             }
-
-            dashDuration = 0.5f;
-            StartCoroutine(Dash());
+            else if  (dashrefresh == 1)
+            {
+                dashDuration = 0.5f;
+                StartCoroutine(Dash()); 
+            }
             
         }
     }

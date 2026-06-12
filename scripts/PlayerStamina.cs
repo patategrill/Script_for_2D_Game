@@ -9,9 +9,32 @@ public class PlayerStamina : Monobehaviour
     ///[SerializeField] private ;
     [serializeField] private PlayerDash playerdash;
 
+    void Start()
+    {
+        playerdash = GetComponent<PlayerDash>();
+
+        Stamina = MaxStamina;
+    }
+
     void Update()
     {
-        ///in construction
+        if (playerdash.isDashing == true)
+        {
+            Stamina -= 10f ;
+        }
+
+        if (Stamina < 100f)
+        {
+            while (Stamina < 100f)
+            {
+                Stamina = Time.deltaTime * 20f;
+            }
+        } 
+
+        if (Stamina > MaxStamina)
+        {
+            Stamina = MaxStamina;
+        }
     }
     
 }

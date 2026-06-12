@@ -7,3 +7,4 @@ here, we have all my features script for the prototype :
 - PlayerHealth
 - EnemyHealth
 - PlayerDash
+- PlayerStamina

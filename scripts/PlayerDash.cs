@@ -1,14 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerDash : MonoBehaviour
 {
     public float dashSpeed = 20f;
-    public float dashDuration = 0.2f;
+    public float dashDuration = 0.5f;
     public int dashrefresh;
 
+    public float timer = 2f;
 
-    public float timer = 0f;
-
+    [SerializeField] private Player player;
     void Start()
     {
         dashrefresh = 1;
@@ -18,25 +19,35 @@ public class PlayerDash : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.ControlKey) && dashrefresh == 1)
         {
-            Dash();
-            dashrefresh = 0;
-
-            while (timer < 2f)
+            if (dashrefresh == 0)
             {
-                timer += Time.deltaTime;
+                return;
             }
-
-            if (timer >= 2f)
-            {
-                dashrefresh = 1;
-                timer = 0f;
-            }
+            
+            dashDuration = 0.5f;
+            StartCoroutine(Dash());
             
         }
     }
 
-    void Dash()
+    IEnumerator Dash()
     {
-        
+        dashrefresh = 0;
+        player = GetComponent<Player>();
+        player.speed = dashSpeed;
+        yield return new WaitForSeconds(timer);
+
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if (timer <= 0)
+        {
+            player.speed = 2f;
+            dashrefresh = 1;
+            timer = 2f;
+        }
     }
+    
 }

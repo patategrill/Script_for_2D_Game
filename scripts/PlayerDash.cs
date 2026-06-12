@@ -9,7 +9,7 @@ public class PlayerDash : MonoBehaviour
 
     public float timer = 2f;
 
-    [SerializeField] private Player player;
+    [SerializeField] private Movement player;
     void Start()
     {
         dashrefresh = 1;

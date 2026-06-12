@@ -6,3 +6,4 @@ here, we have all my features script for the prototype :
 - SpriteChange (when player is moving)
 - PlayerHealth
 - EnemyHealth
+- PlayerDash

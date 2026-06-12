@@ -23,7 +23,7 @@ public class PlayerDash : MonoBehaviour
             {
                 return;
             }
-            
+
             dashDuration = 0.5f;
             StartCoroutine(Dash());
             
@@ -35,7 +35,7 @@ public class PlayerDash : MonoBehaviour
         dashrefresh = 0;
         player = GetComponent<Player>();
         player.speed = dashSpeed;
-        yield return new WaitForSeconds(timer);
+        yield return new WaitForSeconds(dashDuration);
 
         while (timer > 0)
         {
